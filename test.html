@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type='text/javascript' src='../../js/jquery.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="../../js/jquery-barcode.js" charset="utf-8"></script>
+    <script>
+        $(function(){
+             $("#bcTarget3").barcode("153510264086cc8e", "code128", {
+                    output: 'css',       //渲染方式 css/bmp/svg/canvas
+                    //bgColor: '#ff0000', //条码背景颜色
+                    //color: '#00ff00',   //条码颜色
+                    barWidth: 1,        //单条条码宽度
+                    barHeight: 30,     //单体条码高度
+                    // moduleSize: 10,   //条码大小
+                    // posX: 10,        //条码坐标X
+                    // posY: 5,         //条码坐标Y
+                    showHRI: false,    //是否在条码下方显示内容
+                    addQuietZone: false  //是否添加空白区（内边距）
+                });
+        })
+    </script>
+</head>
+<body> 
+    <div id="bcTarget3"></div>
+</body>
+</html>
