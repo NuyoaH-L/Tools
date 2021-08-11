@@ -3,14 +3,11 @@
     <title>二维码生成：QRCode</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <script type="text/javascript" src="https://tooltt.com/assets/require.common.lib.js?v=2https://tooltt.com/assets/js/tools/qq_icon.min.js"></script>
+    <script type="text/javascript" src="https://tooltt.com/assets/js/tooltt.js?v=1.0"></script>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-    <script>
-    function handle(){
-        document.getElementByID("qqimg").src="https://q.qlogo.cn/g?b=qq&nk=448610381&s=640";
-    }
-    </script>
 </head>
 
 <body>
@@ -22,13 +19,16 @@
         <span id="tsText">本页面用于将文字以及链接转换为二维码！</span>
     </div>
     <center>
-        <img src="https://q.qlogo.cn/g?b=qq&nk=1634297622&s=640" style="width:100px; height:100px; margin-top:15px;">
-        <br />
-        <br />
-        <input id="text" type="text" style="width:80%" >
-        <br />
-        <hr />
+        <a :href="qqImgUrl+'&v='+Math.random()" target="_blank">
+          <img :src="qqImgUrl" alt="QQ头像" v-cloak="">
+        </a>
+        <br/>
+        <input type="number" placeholder="QQ号码？" v-model="qqNo" class="tooltt-input">
+        <br/>
+        <hr/>
     </center>
-    <button type="button" class="btn btn-primary btn-block mt-2 " onclick="handle()"> 获取 </button>
+    <button type="button" class="btn btn-primary btn-block mt-2 ">
+        查询
+    </button>
 </body>
 </html>
