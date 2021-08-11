@@ -6,6 +6,11 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script>
+    function handle(){
+        document.getElementByID("qqimg").src="https://q.qlogo.cn/g?b=qq&nk="+text+"&s=640";
+    }
+    </script>
 </head>
 
 <body>
@@ -17,16 +22,12 @@
         <span id="tsText">本页面用于将文字以及链接转换为二维码！</span>
     </div>
     <center>
-        <div id="qqimg" style="width:100px; height:100px; margin-top:15px;">
-          <img src="https://q.qlogo.cn/g?b=qq&nk="+text+"&s=640">
-        </div>
+        <img src="https://q.qlogo.cn/g?b=qq&nk=1634297622&s=640" style="width:100px; height:100px; margin-top:15px;">
         <br/>
         <input id="text" type="text" style="width:80%" >
         <br/>
         <hr/>
     </center>
-    <button type="button" class="btn btn-primary btn-block mt-2 ">
-        获取
-    </button>
+    <button type="button" class="btn btn-primary btn-block mt-2 " onclick="handle()"> 获取 </button>
 </body>
 </html>
